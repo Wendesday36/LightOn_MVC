@@ -11,6 +11,7 @@ class LampaElem {
         this.elem = $(".elem:last-child");
         this.pElem = this.elem.children("p");
         this.#ertek = this.ertek;
+        this.setalap()
         this.elem.on("click", () => {
           
           this.#kattintasTrigger()
