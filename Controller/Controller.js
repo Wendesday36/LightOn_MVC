@@ -8,9 +8,9 @@ class Controller{
     {
      const MODEL = new LampakModel()
     // new Lampak()
-
-     for (let index = 0; index < 9; index++) {
-          new LampaElem($("article"), index)
+        const lista = MODEL.getlist()
+     for (let index = 0; index < lista.length; index++) {
+          new LampaElem($("article"), lista[index])
 
      }
      $(window).on("kapcsolas", (event) => {

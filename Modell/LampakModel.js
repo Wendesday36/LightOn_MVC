@@ -6,7 +6,7 @@ class LampakModel{
     #allapot
     #allapoLista;
     constructor() {
-      this.#allapot = 0
+      this.#allapot = true
       this.#lepes = 0
       this.#meret=this.meret
       this.meret = 3
@@ -17,20 +17,21 @@ class LampakModel{
     }
   
     setAllapot(index) {
-      if (this.#allapot === 1) {
-        this.#allapot = 0;
+      if (this.#allapoLista[index] === true) {
+        this.#allapoLista[index] = false;
   
       } else {
-        this.#allapot = 1;
+        this.#allapoLista[index] = true;
       }
       this.#allapoLista[index]= this.#allapot
       console.log(this.#allapoLista)
       this.#lepes++;
+      
     }
     #setAllapotLista() {
     
         for (let index = 0; index < this.#allapoLista.length; index++) {
-          const szam = Math.floor(Math.random() * 3) + 1;
+          const szam = Math.floor(Math.random() * 2) ;
           if (szam == 1) {
             this.#allapoLista[index] = true;
           } else {

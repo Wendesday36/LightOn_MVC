@@ -32,6 +32,18 @@ class LampaElem {
         
         this.szuloelem.append(txt)
     }
+    setalap(){
+      for (let index = 0; index < 9; index++) {
+        const szam = Math.floor(Math.random() * 3)+1 ;
+        if (szam == 1) {
+          this.ertek==false
+          this.elem.css("background-color", "orange");
+        } else {
+          this.ertek==true
+          this.elem.css("background-color", "green");
+        }
+      }
+    }
     #setSzin() {
         if (this.ertek==false) {
             this.elem.css("background-color", "orange");
